@@ -1,5 +1,5 @@
 def main():
-    print("Hello from CogniLog")
+    print("Hello from CogniLog project!")
 
 
 if __name__ == "__main__":
