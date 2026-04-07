@@ -55,3 +55,4 @@ build/
 *.sqlite3
 *.db
 *.json
+*.svg
