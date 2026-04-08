@@ -1,6 +1,15 @@
-def main():
-    print("Hello from CogniLog project!")
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/health")
+def health_check():
+    return {"status": "CogniLog Backend is Online!"}
